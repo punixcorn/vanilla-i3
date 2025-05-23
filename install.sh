@@ -7,6 +7,10 @@ if [[ -f "$HOME/.xinitrx" ]];then
     cp "$HOME/.xinitrc" "$HOME/.xinitrc_backup"
 fi
 
+if [[ ! -f "$HOME/.wallpaper.jpg "]];then
+    cp -r ./wallpaper.jpg "$HOME/.wallpaper.jpg" 
+fi
+
 echo "exec i3" > "$HOME/.xinitrc"
 [ ! -d ~/.config/i3 ] && mkdir -p ~/.config/i3
 
