@@ -1,13 +1,12 @@
-sudo pacman -Sy
 sudo pacman -S i3-wm i3lock xss-lock i3status 
-sudo pacman -S xorg-server xorg-apps xf86-video-intel libxcb xcb-util xcb-util-keysyms xcb-util-wm xorg xorg-xinit --noconfirm
+sudo pacman -S xorg-server xorg-apps xf86-video-intel libxcb xcb-util xcb-util-keysyms xcb-util-wm xorg xorg-xinit
 sudo pacman -S network-manager-applet neofetch ly alacritty firefox zsh feh  maim
 
 if [[ -f "$HOME/.xinitrx" ]];then
     cp "$HOME/.xinitrc" "$HOME/.xinitrc_backup"
 fi
 
-if [[ ! -f "$HOME/.wallpaper.jpg "]];then
+if [[ ! -f "$HOME/.wallpaper.jpg" ]];then
     cp -r ./wallpaper.jpg "$HOME/.wallpaper.jpg" 
 fi
 
